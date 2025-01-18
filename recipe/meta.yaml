@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-exporter-gcp-trace" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2752dacdd3fdbfd73079d5ac58fc68179758e76535690d479de2bfbe03646583
+  sha256: b0dd95228567da814ac638da8c66f5aaeac384df55f6b0da2c6e5fb93ca2a8c8
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
